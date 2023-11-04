@@ -1,15 +1,15 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:wallpaper_app/Image.dart';
+import 'package:wallpaper_app/models/Image.dart';
 
 class Helper {
   static const String url = "https://api.pexels.com/v1/";
   static const String key =
       "Dkv18GyTSpu99QcIUvqpGAl5j5epc6NEwONuPGPtbWUkev9XVQJNc9jR";
 
-  Future<List<Imagee>> getPage(int page) async {
-    var route = "curated?page=${page}&per_page=10";
+  static Future<List<Imagee>> getPage(int page) async {
+    var route = "curated?page=${page}&per_page=16";
 
     var uri = Uri.parse(url + route);
     var response = await http.get(uri, headers: {'Authorization': key});
