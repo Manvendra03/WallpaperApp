@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
           "Wallpaper App",
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
         ),
+       
       ),
       body: pages[pageIndex],
       bottomNavigationBar: Container(

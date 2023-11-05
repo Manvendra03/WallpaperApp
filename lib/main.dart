@@ -25,10 +25,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-// Shimmer.fromColors(
-//             period: Duration(seconds: 2),
-//             baseColor: Color.fromARGB(255, 233, 231, 231),
-//             highlightColor: const Color.fromARGB(255, 255, 251, 251),
+   

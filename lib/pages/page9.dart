@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:wallpaper_app/download_page.dart';
 import 'package:wallpaper_app/models/Image.dart';
 import 'package:wallpaper_app/helper.dart';
 
@@ -68,12 +69,23 @@ class _Page9State extends State<Page9> {
                 ),
                 itemCount: result.length,
                 itemBuilder: (context, index) {
-                  return Container(
-                    height: 500,
-                    width: 300,
-                    color: Colors.white,
-                    child:
-                        Image.network(result[index].medium, fit: BoxFit.cover),
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DownloadPage(
+                                  url: result[index].large,
+                                )),
+                      );
+                    },
+                    child: Container(
+                      height: 500,
+                      width: 300,
+                      color: Colors.white,
+                      child:
+                          Image.network(result[index].large, fit: BoxFit.cover),
+                    ),
                   );
                 });
           } else {
