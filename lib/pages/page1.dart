@@ -14,7 +14,7 @@ class _Page1State extends State<Page1> {
   List<Imagee> result = [];
   ScrollController scrollController = ScrollController();
 
-  var page_num = 400;
+  var page_num = 1;
   @override
   void initState() {
     // TODO: implement initState
@@ -25,14 +25,13 @@ class _Page1State extends State<Page1> {
   void hasNext() {
     scrollController.addListener(() async {
       if (scrollController.position.maxScrollExtent ==
-              scrollController.position.pixels ) {
+          scrollController.position.pixels) {
         setState(() {
           page_num++;
         });
       }
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +40,54 @@ class _Page1State extends State<Page1> {
       child: FutureBuilder(
         future: Helper.getPage(page_num),
         builder: (context, snapshot) {
-     
           if (snapshot.hasData) {
             for (var element in snapshot.data as List<Imagee>) {
               result.add(element);
             }
 
+            if (result.length == 0) {
+              return Center(
+                  child: Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    color: Colors.grey.shade400,
+                    borderRadius: BorderRadius.circular(20)),
+                height: 150,
+                width: 250,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    const Text(
+                      "Unable to Load Images Please Try Later",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                      textAlign: TextAlign.center,
+                    ),
+                    ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                                Color.fromARGB(255, 153, 22, 72))),
+                        onPressed: () {
+                          //static data or can show downloaded data
+                          result.add(Imagee("large", "", ""));
+                          result.add(Imagee("large", "", ""));
+                          setState(() {});
+                        },
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              "Retry ",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                            Icon(Icons.refresh)
+                          ],
+                        ))
+                  ],
+                ),
+              ));
+            }
             return GridView.builder(
                 controller: scrollController,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

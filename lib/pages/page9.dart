@@ -17,7 +17,7 @@ class _Page9State extends State<Page9> {
 
   List<Imagee> result = [];
   ScrollController scrollController = ScrollController();
-  var page_num = 3100;
+  var page_num = 1;
 
   @override
   void initState() {
@@ -47,6 +47,15 @@ class _Page9State extends State<Page9> {
           if (snapshot.hasData) {
             for (var element in snapshot.data as List<Imagee>) {
               result.add(element);
+            }
+
+            if (result.length == 0) {
+              return Center(
+                  child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.grey,
+              ));
             }
 
             return GridView.builder(
