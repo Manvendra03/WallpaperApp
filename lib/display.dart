@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:wallpaper_app/home_page.dart';
 import 'package:wallpaper_app/pages/page1.dart';
+import 'package:wallpaper_app/pages/page9.dart';
 
 class DisplayScreen extends StatelessWidget {
-  const DisplayScreen({super.key});
+  final String query;
+  DisplayScreen({required this.query, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,9 @@ class DisplayScreen extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
         ),
       ),
-      body: Container(),
+      body: Page9(
+        query: query,
+      ),
     );
   }
 }

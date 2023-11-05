@@ -59,7 +59,10 @@ class CardWidget extends StatelessWidget {
         //
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DisplayScreen()),
+          MaterialPageRoute(
+              builder: (context) => DisplayScreen(
+                    query: CategoryCard.categories[index].query,
+                  )),
         );
       },
       child: Container(

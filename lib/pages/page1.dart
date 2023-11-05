@@ -13,8 +13,8 @@ class Page1 extends StatefulWidget {
 class _Page1State extends State<Page1> {
   List<Imagee> result = [];
   ScrollController scrollController = ScrollController();
-  var page_num = 5;
-  var isLoading = false;
+
+  var page_num = 400;
   @override
   void initState() {
     // TODO: implement initState
@@ -25,23 +25,14 @@ class _Page1State extends State<Page1> {
   void hasNext() {
     scrollController.addListener(() async {
       if (scrollController.position.maxScrollExtent ==
-              scrollController.position.pixels ||
-          !isLoading) {
-        isLoading = true;
-        print("object.length" + result.length.toString());
-        page_num++;
-        List<Imagee> li = await Helper.getPage(page_num);
-
-        for (var element in li) {
-          result.add(element);
-        }
-        isLoading = false;
-        setState(() {});
+              scrollController.position.pixels ) {
+        setState(() {
+          page_num++;
+        });
       }
     });
   }
 
-  // onListen
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +41,7 @@ class _Page1State extends State<Page1> {
       child: FutureBuilder(
         future: Helper.getPage(page_num),
         builder: (context, snapshot) {
-          page_num++;
+     
           if (snapshot.hasData) {
             for (var element in snapshot.data as List<Imagee>) {
               result.add(element);
