@@ -5,6 +5,7 @@ import 'package:wallpaper_app/models/Image.dart';
 import 'package:wallpaper_app/helper.dart';
 import 'package:wallpaper_app/pages/page1.dart';
 import 'package:wallpaper_app/pages/page2.dart';
+import 'package:wallpaper_app/pages/page3.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({
@@ -84,16 +85,5 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     ));
-  }
-}
-
-class Page3 extends StatelessWidget {
-  const Page3({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-    );
   }
 }
