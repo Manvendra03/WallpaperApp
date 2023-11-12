@@ -43,7 +43,7 @@ class Page3 extends StatelessWidget {
                   ],
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                      color: Color.fromARGB(255, 202, 201, 201), width: 2)),
+                      color: Color.fromARGB(255, 153, 22, 72), width: 2)),
               child: const Column(
                 children: [
                   Custom_Tile(
@@ -93,7 +93,7 @@ class Page3 extends StatelessWidget {
                   ],
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                      color: Color.fromARGB(255, 202, 201, 201), width: 2)),
+                      color: Color.fromARGB(255, 153, 22, 72), width: 2)),
               child: const Column(
                 children: [
                   Custom_Tile(
@@ -127,6 +127,7 @@ class Custom_Tile extends StatelessWidget {
       leading: Icon(
         ic,
         size: 27,
+        color: Color.fromARGB(255, 153, 22, 72),
       ),
       title: Text(
         tittle,
@@ -134,6 +135,7 @@ class Custom_Tile extends StatelessWidget {
       ),
       trailing: const Icon(
         Icons.arrow_forward_ios,
+        color: Colors.black,
       ),
     );
   }

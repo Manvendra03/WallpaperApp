@@ -57,7 +57,6 @@ class Helper {
       }
       return tempList;
     } else if (response.statusCode == 429) {
-      print("RHIAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
       await Future.delayed(Duration(seconds: 8));
       getPageBySearch(query, page);
     } else {}
