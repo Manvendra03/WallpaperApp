@@ -38,5 +38,21 @@ class CategoryCard {
         "Anime",
         "https://img.freepik.com/premium-photo/anime-alone-boy-illustration_962635-750.jpg?w=740",
         "anime"),
+    CategoryCard(
+        "Nature",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJqBi4jTOQYfF5cn3Psa2XXsGSoEm1w7dtLA&usqp=CAU",
+        "Nature"),
+    CategoryCard(
+        "Gym",
+        "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ",gym"),
+    CategoryCard(
+        "Culture",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHrMFilPrcxUI8a6N5FfgAgOY1snYRzQrqFQ&usqp=CAU",
+        "culture"),
+    CategoryCard(
+        "Tradition",
+        "https://lifencolors.in/cdn/shop/products/a2ae29_599b928bc2544532bb47a1bedac060c7_mv2.jpg?v=1693472725",
+        "tradition"),
   ];
 }

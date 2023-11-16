@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wallpaper_app/home_page.dart';
-import 'package:wallpaper_app/pages/page1.dart';
 import 'package:wallpaper_app/pages/page9.dart';
 
 class DisplayScreen extends StatelessWidget {

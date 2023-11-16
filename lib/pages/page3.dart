@@ -1,10 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:wallpaper_app/models/Image.dart';
-import 'package:wallpaper_app/helper.dart';
-import 'package:wallpaper_app/pages/page1.dart';
-import 'package:wallpaper_app/pages/page2.dart';
 
 class Page3 extends StatelessWidget {
   const Page3({super.key});
@@ -15,6 +9,7 @@ class Page3 extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 15),
         color: Colors.grey.shade100,
+        // color: Colors.redAccent,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
