@@ -5,104 +5,102 @@ class Page3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        color: Colors.grey.shade100,
-        // color: Colors.redAccent,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            const part_1(),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color.fromARGB(255, 202, 201, 201),
-                      offset: Offset(
-                        .4,
-                        .4,
-                      ),
-                      blurRadius: 1.0,
-                      spreadRadius: 1.0,
-                    ), //BoxShadow
-                    BoxShadow(
-                      color: Colors.white,
-                      offset: Offset(0.0, 0.0),
-                      blurRadius: 0.0,
-                      spreadRadius: 0.0,
-                    ), //BoxShadow
-                  ],
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                      color: Color.fromARGB(255, 153, 22, 72), width: 2)),
-              child: const Column(
-                children: [
-                  Custom_Tile(
-                    ic: Icons.favorite,
-                    tittle: "Liked Wallpapers",
-                  ),
-                  Custom_Tile(
-                    ic: Icons.download,
-                    tittle: "downloads",
-                  ),
-                  Custom_Tile(
-                    ic: Icons.language,
-                    tittle: "Language",
-                  ),
-                  Custom_Tile(
-                    ic: Icons.settings,
-                    tittle: "Settings",
-                  ),
-                  Custom_Tile(
-                    ic: Icons.notifications,
-                    tittle: "Notification",
-                  ),
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      color: Colors.grey.shade100,
+      // color: Colors.redAccent,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          const part_1(),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            decoration: BoxDecoration(
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color.fromARGB(255, 202, 201, 201),
+                    offset: Offset(
+                      .4,
+                      .4,
+                    ),
+                    blurRadius: 1.0,
+                    spreadRadius: 1.0,
+                  ), //BoxShadow
+                  BoxShadow(
+                    color: Colors.white,
+                    offset: Offset(0.0, 0.0),
+                    blurRadius: 0.0,
+                    spreadRadius: 0.0,
+                  ), //BoxShadow
                 ],
-              ),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                    color: Color.fromARGB(255, 153, 22, 72), width: 2)),
+            child: const Column(
+              children: [
+                Custom_Tile(
+                  ic: Icons.favorite,
+                  tittle: "Liked Wallpapers",
+                ),
+                Custom_Tile(
+                  ic: Icons.download,
+                  tittle: "downloads",
+                ),
+                Custom_Tile(
+                  ic: Icons.language,
+                  tittle: "Language",
+                ),
+                Custom_Tile(
+                  ic: Icons.settings,
+                  tittle: "Settings",
+                ),
+                Custom_Tile(
+                  ic: Icons.notifications,
+                  tittle: "Notification",
+                ),
+              ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color.fromARGB(255, 202, 201, 201),
-                      offset: Offset(
-                        .4,
-                        .4,
-                      ),
-                      blurRadius: 1.0,
-                      spreadRadius: 1.0,
-                    ), //BoxShadow
-                    BoxShadow(
-                      color: Colors.white,
-                      offset: Offset(0.0, 0.0),
-                      blurRadius: 0.0,
-                      spreadRadius: 0.0,
-                    ), //BoxShadow
-                  ],
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                      color: Color.fromARGB(255, 153, 22, 72), width: 2)),
-              child: const Column(
-                children: [
-                  Custom_Tile(
-                    ic: Icons.logout,
-                    tittle: "Logout",
-                  ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            decoration: BoxDecoration(
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color.fromARGB(255, 202, 201, 201),
+                    offset: Offset(
+                      .4,
+                      .4,
+                    ),
+                    blurRadius: 1.0,
+                    spreadRadius: 1.0,
+                  ), //BoxShadow
+                  BoxShadow(
+                    color: Colors.white,
+                    offset: Offset(0.0, 0.0),
+                    blurRadius: 0.0,
+                    spreadRadius: 0.0,
+                  ), //BoxShadow
                 ],
-              ),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                    color: Color.fromARGB(255, 153, 22, 72), width: 2)),
+            child: const Column(
+              children: [
+                Custom_Tile(
+                  ic: Icons.logout,
+                  tittle: "Logout",
+                ),
+              ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+        ],
       ),
     );
   }

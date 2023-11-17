@@ -40,16 +40,23 @@ dependencies:
   provider: ^6.0.5
   flutter_file_downloader: ^1.1.4
   google_fonts: ^6.1.0
-  flutter_native_splash: ^2.3.5
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+  flutter_launcher_icons: ^0.13.1
 
-flutter_native_splash:
-  android: false
-  ios: false
-  web: false
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "images/logo.png"  
+  
+  adaptive_icon_foreground: "images/fore.png"
+  adaptive_icon_background: "#000000"
+
+
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
